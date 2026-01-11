@@ -1,0 +1,13 @@
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/bin/Debug/net10.0/Standards.Net.API.deps.json
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/bin/Debug/net10.0/Standards.Net.API.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/bin/Debug/net10.0/Standards.Net.API.pdb
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standards.Net.API.csproj.AssemblyReference.cache
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standards.Net.API.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standards.Net.API.AssemblyInfoInputs.cache
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standards.Net.API.AssemblyInfo.cs
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standards.Net.API.csproj.CoreCompileInputs.cache
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standards.Net.API.sourcelink.json
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standards.Net.API.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/refint/Standards.Net.API.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standards.Net.API.pdb
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/ref/Standards.Net.API.dll

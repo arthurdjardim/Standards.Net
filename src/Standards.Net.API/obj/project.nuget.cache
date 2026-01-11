@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aj8GZMqI6og=",
+  "dgSpecHash": "HLxgBr15HCk=",
   "success": true,
-  "projectFilePath": "/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/Default.API.Standards.csproj",
+  "projectFilePath": "/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/Standards.Net.API.csproj",
   "expectedPackageFiles": [
     "/Users/arthurcjardim/.nuget/packages/fluentvalidation/11.12.0/fluentvalidation.11.12.0.nupkg.sha512",
     "/Users/arthurcjardim/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.12.0/fluentvalidation.dependencyinjectionextensions.11.12.0.nupkg.sha512",

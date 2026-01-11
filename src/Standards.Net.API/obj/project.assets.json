@@ -531,14 +531,13 @@
   "project": {
     "version": "1.0.0-alpha",
     "restore": {
-      "projectUniqueName": "/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/Default.API.Standards.csproj",
-      "projectName": "Default.API.Standards",
-      "projectPath": "/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/Default.API.Standards.csproj",
+      "projectUniqueName": "/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/Standards.Net.API.csproj",
+      "projectName": "Standards.Net.API",
+      "projectPath": "/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/Standards.Net.API.csproj",
       "packagesPath": "/Users/arthurcjardim/.nuget/packages/",
-      "outputPath": "/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/",
+      "outputPath": "/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/arthurcjardim/barbershop/back/NuGet.Config",
         "/Users/arthurcjardim/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
