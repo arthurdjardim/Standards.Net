@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <PackageId>Standards.Net.Exceptions</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Standards.Net</Authors>
+    <Description>Transport-agnostic domain exceptions for .NET applications.</Description>
+    <PackageTags>exceptions;domain;errors;http;statuscode</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+</Project>

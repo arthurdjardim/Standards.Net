@@ -12,7 +12,10 @@ public sealed class SecurityHeadersMiddleware
     private readonly RequestDelegate _next;
     private readonly ILogger<SecurityHeadersMiddleware> _logger;
 
-    public SecurityHeadersMiddleware(RequestDelegate next, ILogger<SecurityHeadersMiddleware> logger)
+    public SecurityHeadersMiddleware(
+        RequestDelegate next,
+        ILogger<SecurityHeadersMiddleware> logger
+    )
     {
         _next = next;
         _logger = logger;
@@ -33,7 +36,10 @@ public sealed class SecurityHeadersMiddleware
         context.Response.Headers.Append("Referrer-Policy", "strict-origin-when-cross-origin");
 
         // Content-Security-Policy: Restrict resource loading
-        context.Response.Headers.Append("Content-Security-Policy", "default-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests;");
+        context.Response.Headers.Append(
+            "Content-Security-Policy",
+            "default-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
+        );
 
         // Permissions-Policy: Control browser features and APIs
         context.Response.Headers.Append(

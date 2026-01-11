@@ -64,7 +64,12 @@ public sealed class PagedResult<T>
     /// <summary>
     /// Creates a paged result from a source query.
     /// </summary>
-    public static PagedResult<T> Create(IReadOnlyList<T> items, int totalCount, int pageNumber, int pageSize)
+    public static PagedResult<T> Create(
+        IReadOnlyList<T> items,
+        int totalCount,
+        int pageNumber,
+        int pageSize
+    )
     {
         return new PagedResult<T>(items, totalCount, pageNumber, pageSize);
     }

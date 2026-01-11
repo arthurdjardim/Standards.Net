@@ -66,7 +66,10 @@ public sealed class ApiResponse<T>
     /// <param name="message">The error message.</param>
     /// <param name="validationErrors">Dictionary of field names and their error messages.</param>
     /// <returns>An error API response.</returns>
-    public static ApiResponse<T> ValidationError(string message, IDictionary<string, string[]> validationErrors)
+    public static ApiResponse<T> ValidationError(
+        string message,
+        IDictionary<string, string[]> validationErrors
+    )
     {
         var errors = new List<string>();
         foreach (var (field, fieldErrors) in validationErrors)
@@ -108,7 +111,8 @@ public static class ApiResponse
     /// </summary>
     /// <param name="message">Optional success message.</param>
     /// <returns>A successful API response.</returns>
-    public static ApiResponse<object> Ok(string? message = null) => new() { Success = true, Message = message };
+    public static ApiResponse<object> Ok(string? message = null) =>
+        new() { Success = true, Message = message };
 
     /// <summary>
     /// Creates an error response without data.

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "y+teuJvEPlo=",
+  "success": true,
+  "projectFilePath": "/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/Standards.Net.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/arthurcjardim/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.1/microsoft.extensions.dependencyinjection.abstractions.10.0.1.nupkg.sha512",
+    "/Users/arthurcjardim/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.1/microsoft.extensions.logging.abstractions.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

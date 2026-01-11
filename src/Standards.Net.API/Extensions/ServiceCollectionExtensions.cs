@@ -1,14 +1,14 @@
 using System.Text;
-using Standards.Net.API.Filters;
-using Standards.Net.API.Middleware;
-using Standards.Net.API.Options;
-using Standards.Net.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Standards.Net.API.Filters;
+using Standards.Net.API.Middleware;
+using Standards.Net.API.Options;
+using Standards.Net.API.Services;
 
 namespace Standards.Net.API.Extensions;
 
@@ -26,7 +26,10 @@ public static class ServiceCollectionExtensions
         /// <param name="configuration">The configuration section containing ApiStandardsOptions.</param>
         /// <param name="configureOptions">Optional action to configure options programmatically.</param>
         /// <returns>The service collection for chaining.</returns>
-        public IServiceCollection AddDefaultApi(IConfiguration configuration, Action<ApiStandardsOptions>? configureOptions = null)
+        public IServiceCollection AddDefaultApi(
+            IConfiguration configuration,
+            Action<ApiStandardsOptions>? configureOptions = null
+        )
         {
             // Bind and configure options
             var options = new ApiStandardsOptions();
@@ -99,7 +102,10 @@ public static class ServiceCollectionExtensions
         /// <param name="configuration">The configuration section containing JwtOptions.</param>
         /// <param name="configureOptions">Optional action to configure JWT options programmatically.</param>
         /// <returns>The service collection for chaining.</returns>
-        public IServiceCollection AddDefaultJwtAuthentication(IConfiguration configuration, Action<JwtOptions>? configureOptions = null)
+        public IServiceCollection AddDefaultJwtAuthentication(
+            IConfiguration configuration,
+            Action<JwtOptions>? configureOptions = null
+        )
         {
             var jwtOptions = new JwtOptions();
             configuration.Bind(jwtOptions);
@@ -117,7 +123,9 @@ public static class ServiceCollectionExtensions
                         ValidateIssuerSigningKey = jwtOptions.ValidateIssuerSigningKey,
                         ValidIssuer = jwtOptions.Issuer,
                         ValidAudience = jwtOptions.Audience,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.SecretKey)),
+                        IssuerSigningKey = new SymmetricSecurityKey(
+                            Encoding.UTF8.GetBytes(jwtOptions.SecretKey)
+                        ),
                         ClockSkew = jwtOptions.ClockSkew,
                     };
                 });
@@ -130,7 +138,10 @@ public static class ServiceCollectionExtensions
         /// </summary>
         /// <param name="configurePolicies">Action to configure custom authorization policies.</param>
         /// <returns>The service collection for chaining.</returns>
-        public IServiceCollection AddDefaultAuthorization(Action<Microsoft.AspNetCore.Authorization.AuthorizationOptions>? configurePolicies = null)
+        public IServiceCollection AddDefaultAuthorization(
+            Action<Microsoft.AspNetCore.Authorization.AuthorizationOptions>? configurePolicies =
+                null
+        )
         {
             services.AddAuthorization(options =>
             {
@@ -211,7 +222,9 @@ public static class ServiceCollectionExtensions
                         // Configure preflight cache
                         if (options.PreflightMaxAge > 0)
                         {
-                            builder.SetPreflightMaxAge(TimeSpan.FromSeconds(options.PreflightMaxAge));
+                            builder.SetPreflightMaxAge(
+                                TimeSpan.FromSeconds(options.PreflightMaxAge)
+                            );
                         }
                     }
                 );

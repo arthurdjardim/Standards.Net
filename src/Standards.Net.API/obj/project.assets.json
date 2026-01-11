@@ -225,6 +225,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Standards.Net.Exceptions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Standards.Net.Exceptions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Standards.Net.Exceptions.dll": {}
+        }
       }
     }
   },
@@ -515,6 +525,11 @@
         "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
+    },
+    "Standards.Net.Exceptions/1.0.0": {
+      "type": "project",
+      "path": "../Standards.Net.Exceptions/Standards.Net.Exceptions.csproj",
+      "msbuildProject": "../Standards.Net.Exceptions/Standards.Net.Exceptions.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -522,14 +537,15 @@
       "FluentValidation.DependencyInjectionExtensions >= 11.12.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.1",
       "Microsoft.AspNetCore.OpenApi >= 10.0.1",
-      "Scalar.AspNetCore >= 2.11.10"
+      "Scalar.AspNetCore >= 2.11.10",
+      "Standards.Net.Exceptions >= 1.0.0"
     ]
   },
   "packageFolders": {
     "/Users/arthurcjardim/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.0-alpha",
+    "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/Standards.Net.API.csproj",
       "projectName": "Standards.Net.API",
@@ -549,7 +565,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/Standards.Net.Exceptions.csproj": {
+              "projectPath": "/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/Standards.Net.Exceptions.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

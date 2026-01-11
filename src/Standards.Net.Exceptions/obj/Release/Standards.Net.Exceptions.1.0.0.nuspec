@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Standards.Net.Exceptions</id>
+    <version>1.0.0</version>
+    <authors>Standards.Net</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>Transport-agnostic domain exceptions for .NET applications.</description>
+    <tags>exceptions domain errors http statuscode</tags>
+    <repository type="git" commit="601e547a5f1533e77250bf19e49258e5777b2082" />
+    <dependencies>
+      <group targetFramework="net10.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/bin/Release/net10.0/Standards.Net.Exceptions.dll" target="lib/net10.0/Standards.Net.Exceptions.dll" />
+    <file src="/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/bin/Release/net10.0/Standards.Net.Exceptions.xml" target="lib/net10.0/Standards.Net.Exceptions.xml" />
+  </files>
+</package>

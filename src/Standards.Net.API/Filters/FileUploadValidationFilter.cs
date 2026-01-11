@@ -1,7 +1,7 @@
-using Standards.Net.API.Models;
-using Standards.Net.API.Options;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
+using Standards.Net.API.Models;
+using Standards.Net.API.Options;
 
 namespace Standards.Net.API.Filters;
 
@@ -17,7 +17,10 @@ public sealed class FileUploadValidationFilter : IEndpointFilter
         _options = options.Value;
     }
 
-    public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
+    public async ValueTask<object?> InvokeAsync(
+        EndpointFilterInvocationContext context,
+        EndpointFilterDelegate next
+    )
     {
         var httpContext = context.HttpContext;
 
@@ -50,14 +53,22 @@ public sealed class FileUploadValidationFilter : IEndpointFilter
         if (file.Length > _options.MaxFileSizeBytes)
         {
             var maxSizeMb = _options.MaxFileSizeBytes / (1024.0 * 1024.0);
-            return Results.BadRequest(ApiResponse<object>.Error($"File size exceeds maximum allowed size of {maxSizeMb:F1}MB."));
+            return Results.BadRequest(
+                ApiResponse<object>.Error(
+                    $"File size exceeds maximum allowed size of {maxSizeMb:F1}MB."
+                )
+            );
         }
 
         // Validate minimum file size if configured
         if (_options.MinFileSizeBytes > 0 && file.Length < _options.MinFileSizeBytes)
         {
             var minSizeKb = _options.MinFileSizeBytes / 1024.0;
-            return Results.BadRequest(ApiResponse<object>.Error($"File size is below minimum required size of {minSizeKb:F1}KB."));
+            return Results.BadRequest(
+                ApiResponse<object>.Error(
+                    $"File size is below minimum required size of {minSizeKb:F1}KB."
+                )
+            );
         }
 
         return await next(context);

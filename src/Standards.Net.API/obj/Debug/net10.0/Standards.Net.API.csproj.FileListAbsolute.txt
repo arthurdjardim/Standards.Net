@@ -11,3 +11,6 @@
 /Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/refint/Standards.Net.API.dll
 /Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standards.Net.API.pdb
 /Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/ref/Standards.Net.API.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/bin/Debug/net10.0/Standards.Net.Exceptions.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/bin/Debug/net10.0/Standards.Net.Exceptions.pdb
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/obj/Debug/net10.0/Standard.AE484D62.Up2Date

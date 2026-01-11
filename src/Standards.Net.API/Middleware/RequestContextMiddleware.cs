@@ -1,8 +1,8 @@
-using Standards.Net.API.Options;
-using Standards.Net.API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Standards.Net.API.Options;
+using Standards.Net.API.Services;
 
 namespace Standards.Net.API.Middleware;
 
@@ -16,7 +16,11 @@ public sealed class RequestContextMiddleware
     private readonly ILogger<RequestContextMiddleware> _logger;
     private readonly ApiStandardsOptions _options;
 
-    public RequestContextMiddleware(RequestDelegate next, ILogger<RequestContextMiddleware> logger, IOptions<ApiStandardsOptions> options)
+    public RequestContextMiddleware(
+        RequestDelegate next,
+        ILogger<RequestContextMiddleware> logger,
+        IOptions<ApiStandardsOptions> options
+    )
     {
         _next = next;
         _logger = logger;
@@ -30,7 +34,9 @@ public sealed class RequestContextMiddleware
             // Extract and set correlation ID
             if (_options.EnableCorrelationId)
             {
-                var correlationId = context.Request.Headers[_options.CorrelationIdHeader].FirstOrDefault() ?? Guid.NewGuid().ToString();
+                var correlationId =
+                    context.Request.Headers[_options.CorrelationIdHeader].FirstOrDefault()
+                    ?? Guid.NewGuid().ToString();
                 requestContext.SetCorrelationId(correlationId);
                 context.Response.Headers.Append(_options.CorrelationIdHeader, correlationId);
                 _logger.LogDebug("Correlation ID set to {CorrelationId}", correlationId);
@@ -82,7 +88,10 @@ public sealed class RequestContextMiddleware
             {
                 if (routeValue.Value is not null)
                 {
-                    requestContext.SetValue($"Route_{routeValue.Key}", routeValue.Value.ToString()!);
+                    requestContext.SetValue(
+                        $"Route_{routeValue.Key}",
+                        routeValue.Value.ToString()!
+                    );
                 }
             }
 

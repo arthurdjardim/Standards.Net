@@ -1,7 +1,7 @@
-using Standards.Net.API.Models;
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Standards.Net.API.Models;
 
 namespace Standards.Net.API.Filters;
 
@@ -20,7 +20,10 @@ public sealed class ValidationEndpointFilter<TRequest> : IEndpointFilter
         _validator = serviceProvider.GetService<IValidator<TRequest>>();
     }
 
-    public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
+    public async ValueTask<object?> InvokeAsync(
+        EndpointFilterInvocationContext context,
+        EndpointFilterDelegate next
+    )
     {
         if (_validator is null)
         {
@@ -33,12 +36,15 @@ public sealed class ValidationEndpointFilter<TRequest> : IEndpointFilter
             return await next(context);
         }
 
-        var validationResult = await _validator.ValidateAsync(request, context.HttpContext.RequestAborted);
+        var validationResult = await _validator.ValidateAsync(
+            request,
+            context.HttpContext.RequestAborted
+        );
 
         if (!validationResult.IsValid)
         {
-            var errors = validationResult.Errors
-                .GroupBy(e => e.PropertyName)
+            var errors = validationResult
+                .Errors.GroupBy(e => e.PropertyName)
                 .ToDictionary(g => g.Key, g => g.Select(e => e.ErrorMessage).ToArray());
 
             // Return just error messages without field names for backward compatibility

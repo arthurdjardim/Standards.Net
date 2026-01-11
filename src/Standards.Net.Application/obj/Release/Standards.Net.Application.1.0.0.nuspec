@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Standards.Net.Application</id>
+    <version>1.0.0</version>
+    <authors>Standards.Net</authors>
+    <description>Application layer abstractions for CQRS pattern - Commands, Queries, Events, and Dispatchers</description>
+    <tags>cqrs commands queries events dispatcher application</tags>
+    <repository type="git" commit="601e547a5f1533e77250bf19e49258e5777b2082" />
+    <dependencies>
+      <group targetFramework="net10.0">
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="10.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="10.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/bin/Release/net10.0/Standards.Net.Application.dll" target="lib/net10.0/Standards.Net.Application.dll" />
+  </files>
+</package>

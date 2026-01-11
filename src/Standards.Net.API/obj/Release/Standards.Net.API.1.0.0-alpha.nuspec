@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Standards.Net.API</id>
+    <version>1.0.0-alpha</version>
+    <authors>Default Team</authors>
+    <description>Biblioteca de padronização para APIs ASP.NET Core.</description>
+    <repository type="git" commit="601e547a5f1533e77250bf19e49258e5777b2082" />
+    <dependencies>
+      <group targetFramework="net10.0">
+        <dependency id="Standards.Net.Exceptions" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="FluentValidation.DependencyInjectionExtensions" version="11.12.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.JwtBearer" version="10.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.OpenApi" version="10.0.1" exclude="Build,Analyzers" />
+        <dependency id="Scalar.AspNetCore" version="2.11.10" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/arthurcjardim/Standards.Net/src/Standards.Net.API/bin/Release/net10.0/Standards.Net.API.dll" target="lib/net10.0/Standards.Net.API.dll" />
+  </files>
+</package>

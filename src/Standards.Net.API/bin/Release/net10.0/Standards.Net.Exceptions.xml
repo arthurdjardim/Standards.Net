@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Standards.Net.Exceptions</name>
+    </assembly>
+    <members>
+        <member name="T:Standards.Net.Exceptions.BadRequestException">
+            <summary>
+            Exception thrown when a business rule is violated or the request is invalid.
+            </summary>
+        </member>
+        <member name="P:Standards.Net.Exceptions.BadRequestException.RuleName">
+            <summary>
+            Gets the name of the business rule that was violated, if applicable.
+            </summary>
+        </member>
+        <member name="T:Standards.Net.Exceptions.ConflictException">
+            <summary>
+            Exception thrown when a resource conflict occurs (duplicate resource, state conflict, etc.).
+            </summary>
+        </member>
+        <member name="P:Standards.Net.Exceptions.ConflictException.PropertyName">
+            <summary>
+            Gets the name of the property that has a conflicting value.
+            </summary>
+        </member>
+        <member name="P:Standards.Net.Exceptions.ConflictException.PropertyValue">
+            <summary>
+            Gets the conflicting value.
+            </summary>
+        </member>
+        <member name="T:Standards.Net.Exceptions.DomainException">
+            <summary>
+            Base exception for all domain-specific errors.
+            Provides a foundation for standardized error handling without HTTP dependencies.
+            </summary>
+        </member>
+        <member name="P:Standards.Net.Exceptions.DomainException.Code">
+            <summary>
+            Gets the error code associated with this exception.
+            Used to map to appropriate HTTP status codes in the API layer.
+            </summary>
+        </member>
+        <member name="P:Standards.Net.Exceptions.DomainException.ErrorDetails">
+            <summary>
+            Gets additional error details that can be included in the response.
+            </summary>
+        </member>
+        <member name="M:Standards.Net.Exceptions.DomainException.AddErrorDetail(System.String,System.Object)">
+            <summary>
+            Adds custom error details to the exception.
+            </summary>
+        </member>
+        <member name="T:Standards.Net.Exceptions.ErrorCode">
+            <summary>
+            Error codes that map to HTTP status codes.
+            Provides a transport-agnostic way to categorize errors.
+            </summary>
+        </member>
+        <member name="F:Standards.Net.Exceptions.ErrorCode.BadRequest">
+            <summary>
+            Bad request - validation or malformed request (HTTP 400).
+            </summary>
+        </member>
+        <member name="F:Standards.Net.Exceptions.ErrorCode.Unauthorized">
+            <summary>
+            Unauthorized - authentication required (HTTP 401).
+            </summary>
+        </member>
+        <member name="F:Standards.Net.Exceptions.ErrorCode.Forbidden">
+            <summary>
+            Forbidden - access denied (HTTP 403).
+            </summary>
+        </member>
+        <member name="F:Standards.Net.Exceptions.ErrorCode.NotFound">
+            <summary>
+            Not found - resource does not exist (HTTP 404).
+            </summary>
+        </member>
+        <member name="F:Standards.Net.Exceptions.ErrorCode.Conflict">
+            <summary>
+            Conflict - resource already exists or state conflict (HTTP 409).
+            </summary>
+        </member>
+        <member name="F:Standards.Net.Exceptions.ErrorCode.UnprocessableEntity">
+            <summary>
+            Unprocessable entity - semantic errors (HTTP 422).
+            </summary>
+        </member>
+        <member name="F:Standards.Net.Exceptions.ErrorCode.InternalError">
+            <summary>
+            Internal server error (HTTP 500).
+            </summary>
+        </member>
+        <member name="T:Standards.Net.Exceptions.ForbiddenException">
+            <summary>
+            Exception thrown when access to a resource is forbidden.
+            </summary>
+        </member>
+        <member name="P:Standards.Net.Exceptions.ForbiddenException.Reason">
+            <summary>
+            Gets the reason for the forbidden access, if specified.
+            </summary>
+        </member>
+        <member name="T:Standards.Net.Exceptions.NotFoundException">
+            <summary>
+            Exception thrown when a requested resource is not found.
+            </summary>
+        </member>
+        <member name="P:Standards.Net.Exceptions.NotFoundException.ResourceType">
+            <summary>
+            Gets the type of resource that was not found.
+            </summary>
+        </member>
+        <member name="P:Standards.Net.Exceptions.NotFoundException.ResourceId">
+            <summary>
+            Gets the identifier of the resource that was not found.
+            </summary>
+        </member>
+        <member name="T:Standards.Net.Exceptions.UnauthorizedException">
+            <summary>
+            Exception thrown when authentication is required but not provided or invalid.
+            </summary>
+        </member>
+        <member name="T:Standards.Net.Exceptions.ValidationException">
+            <summary>
+            Exception thrown when input validation fails.
+            </summary>
+        </member>
+        <member name="P:Standards.Net.Exceptions.ValidationException.Errors">
+            <summary>
+            Gets the validation errors.
+            </summary>
+        </member>
+    </members>
+</doc>

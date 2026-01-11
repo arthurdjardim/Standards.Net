@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+
+env:
+  DOTNET_VERSION: '10.0.x'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+    
+    - name: Restore dependencies
+      run: dotnet restore
+    
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    
+    - name: Run tests
+      run: dotnet test --configuration Release --no-build --verbosity normal
+    
+    - name: Pack (dry run)
+      run: |
+        dotnet pack src/Standards.Net.Exceptions/Standards.Net.Exceptions.csproj --configuration Release --no-build --output nupkgs
+        dotnet pack src/Standards.Net.Application/Standards.Net.Application.csproj --configuration Release --no-build --output nupkgs
+        dotnet pack src/Standards.Net.API/Standards.Net.API.csproj --configuration Release --no-build --output nupkgs
+        ls -la nupkgs/

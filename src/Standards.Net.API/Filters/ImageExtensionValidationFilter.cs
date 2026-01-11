@@ -1,7 +1,7 @@
-using Standards.Net.API.Models;
-using Standards.Net.API.Options;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
+using Standards.Net.API.Models;
+using Standards.Net.API.Options;
 
 namespace Standards.Net.API.Filters;
 
@@ -17,7 +17,10 @@ public sealed class ImageExtensionValidationFilter : IEndpointFilter
         _options = options.Value;
     }
 
-    public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
+    public async ValueTask<object?> InvokeAsync(
+        EndpointFilterInvocationContext context,
+        EndpointFilterDelegate next
+    )
     {
         var httpContext = context.HttpContext;
 
@@ -28,10 +31,17 @@ public sealed class ImageExtensionValidationFilter : IEndpointFilter
             // Validate file extension
             var fileExtension = Path.GetExtension(file.FileName)?.ToLowerInvariant();
 
-            if (string.IsNullOrEmpty(fileExtension) || !_options.AllowedImageExtensions.Contains(fileExtension))
+            if (
+                string.IsNullOrEmpty(fileExtension)
+                || !_options.AllowedImageExtensions.Contains(fileExtension)
+            )
             {
                 var allowedExtensionsText = string.Join(", ", _options.AllowedImageExtensions);
-                return Results.BadRequest(ApiResponse<object>.Error($"Invalid file extension. Only {allowedExtensionsText} are allowed."));
+                return Results.BadRequest(
+                    ApiResponse<object>.Error(
+                        $"Invalid file extension. Only {allowedExtensionsText} are allowed."
+                    )
+                );
             }
         }
 

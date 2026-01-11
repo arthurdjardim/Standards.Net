@@ -1,0 +1,12 @@
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/bin/Debug/net10.0/Standards.Net.Exceptions.deps.json
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/bin/Debug/net10.0/Standards.Net.Exceptions.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/bin/Debug/net10.0/Standards.Net.Exceptions.pdb
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/obj/Debug/net10.0/Standards.Net.Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/obj/Debug/net10.0/Standards.Net.Exceptions.AssemblyInfoInputs.cache
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/obj/Debug/net10.0/Standards.Net.Exceptions.AssemblyInfo.cs
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/obj/Debug/net10.0/Standards.Net.Exceptions.csproj.CoreCompileInputs.cache
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/obj/Debug/net10.0/Standards.Net.Exceptions.sourcelink.json
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/obj/Debug/net10.0/Standards.Net.Exceptions.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/obj/Debug/net10.0/refint/Standards.Net.Exceptions.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/obj/Debug/net10.0/Standards.Net.Exceptions.pdb
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Exceptions/obj/Debug/net10.0/ref/Standards.Net.Exceptions.dll

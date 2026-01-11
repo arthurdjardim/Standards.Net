@@ -1,10 +1,10 @@
-using Standards.Net.API.Middleware;
-using Standards.Net.API.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Scalar.AspNetCore;
+using Standards.Net.API.Middleware;
+using Standards.Net.API.Options;
 
 namespace Standards.Net.API.Extensions;
 
@@ -22,7 +22,9 @@ public static class ApplicationBuilderExtensions
         /// <returns>The application builder for chaining.</returns>
         public IApplicationBuilder UseDefaultApiPipeline()
         {
-            var options = app.ApplicationServices.GetRequiredService<IOptions<ApiStandardsOptions>>().Value;
+            var options = app
+                .ApplicationServices.GetRequiredService<IOptions<ApiStandardsOptions>>()
+                .Value;
             var env = app.ApplicationServices.GetRequiredService<IHostEnvironment>();
 
             // 1. Response compression (must be early)
@@ -113,7 +115,9 @@ public static class ApplicationBuilderExtensions
             string readinessPath = "/health/ready"
         )
         {
-            var options = app.ApplicationServices.GetRequiredService<IOptions<ApiStandardsOptions>>().Value;
+            var options = app
+                .ApplicationServices.GetRequiredService<IOptions<ApiStandardsOptions>>()
+                .Value;
 
             if (!options.EnableHealthChecks)
             {

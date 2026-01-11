@@ -1,0 +1,13 @@
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/bin/Release/net10.0/Standards.Net.Application.deps.json
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/bin/Release/net10.0/Standards.Net.Application.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/bin/Release/net10.0/Standards.Net.Application.pdb
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/Standards.Net.Application.csproj.AssemblyReference.cache
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/Standards.Net.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/Standards.Net.Application.AssemblyInfoInputs.cache
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/Standards.Net.Application.AssemblyInfo.cs
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/Standards.Net.Application.csproj.CoreCompileInputs.cache
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/Standards.Net.Application.sourcelink.json
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/Standards.Net.Application.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/refint/Standards.Net.Application.dll
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/Standards.Net.Application.pdb
+/Users/arthurcjardim/Standards.Net/src/Standards.Net.Application/obj/Release/net10.0/ref/Standards.Net.Application.dll

@@ -1,7 +1,7 @@
 using System.Diagnostics;
-using Standards.Net.API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Standards.Net.API.Services;
 
 namespace Standards.Net.API.Middleware;
 

@@ -11,7 +11,8 @@
           "FluentValidation.DependencyInjectionExtensions": "11.12.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.1",
           "Microsoft.AspNetCore.OpenApi": "10.0.1",
-          "Scalar.AspNetCore": "2.11.10"
+          "Scalar.AspNetCore": "2.11.10",
+          "Standards.Net.Exceptions": "1.0.0-alpha"
         },
         "runtime": {
           "Standards.Net.API.dll": {}
@@ -149,6 +150,14 @@
             "fileVersion": "8.0.1.50722"
           }
         }
+      },
+      "Standards.Net.Exceptions/1.0.0-alpha": {
+        "runtime": {
+          "Standards.Net.Exceptions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -248,6 +257,11 @@
       "sha512": "sha512-GJw3bYkWpOgvN3tJo5X4lYUeIFA2HD293FPUhKmp7qxS+g5ywAb34Dnd3cDAFLkcMohy5XTpoaZ4uAHuw0uSPQ==",
       "path": "system.identitymodel.tokens.jwt/8.0.1",
       "hashPath": "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
+    },
+    "Standards.Net.Exceptions/1.0.0-alpha": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

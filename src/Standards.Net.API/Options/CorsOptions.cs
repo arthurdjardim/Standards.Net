@@ -27,7 +27,8 @@ public sealed class CorsOptions
     /// Gets or sets the allowed HTTP methods.
     /// Default: GET, POST, PUT, DELETE, PATCH, OPTIONS.
     /// </summary>
-    public List<string> AllowedMethods { get; set; } = new() { "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS" };
+    public List<string> AllowedMethods { get; set; } =
+        new() { "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS" };
 
     /// <summary>
     /// Gets or sets whether to allow any HTTP method.
@@ -39,7 +40,8 @@ public sealed class CorsOptions
     /// Gets or sets the allowed headers.
     /// Default: Content-Type, Authorization, X-Tenant-Id, X-Correlation-Id.
     /// </summary>
-    public List<string> AllowedHeaders { get; set; } = new() { "Content-Type", "Authorization", "X-Tenant-Id", "X-Correlation-Id" };
+    public List<string> AllowedHeaders { get; set; } =
+        new() { "Content-Type", "Authorization", "X-Tenant-Id", "X-Correlation-Id" };
 
     /// <summary>
     /// Gets or sets whether to allow any header.

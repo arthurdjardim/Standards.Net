@@ -1,8 +1,8 @@
-using Standards.Net.API.Models;
-using Standards.Net.API.Options;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Standards.Net.API.Models;
+using Standards.Net.API.Options;
 
 namespace Standards.Net.API.Middleware;
 
@@ -17,7 +17,11 @@ public sealed class TenantJwtValidationMiddleware
     private readonly ILogger<TenantJwtValidationMiddleware> _logger;
     private readonly ApiStandardsOptions _options;
 
-    public TenantJwtValidationMiddleware(RequestDelegate next, ILogger<TenantJwtValidationMiddleware> logger, IOptions<ApiStandardsOptions> options)
+    public TenantJwtValidationMiddleware(
+        RequestDelegate next,
+        ILogger<TenantJwtValidationMiddleware> logger,
+        IOptions<ApiStandardsOptions> options
+    )
     {
         _next = next;
         _logger = logger;
@@ -59,7 +63,9 @@ public sealed class TenantJwtValidationMiddleware
 
                 context.Response.StatusCode = StatusCodes.Status403Forbidden;
                 await context.Response.WriteAsJsonAsync(
-                    ApiResponse.Error("Tenant context mismatch. You cannot access resources from a different tenant.")
+                    ApiResponse.Error(
+                        "Tenant context mismatch. You cannot access resources from a different tenant."
+                    )
                 );
                 return;
             }

@@ -1,7 +1,7 @@
-using Standards.Net.API.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Standards.Net.API.Filters;
 
 namespace Standards.Net.API.Extensions;
 
@@ -48,7 +48,10 @@ public static class EndpointRouteBuilderExtensions
         /// <returns>The route group builder for further configuration.</returns>
         public RouteGroupBuilder MapFileUploadGroup(string prefix, bool imageOnly = true)
         {
-            var group = builder.MapGroup(prefix).AddEndpointFilter<ExceptionHandlingEndpointFilter>().AddEndpointFilter<FileUploadValidationFilter>();
+            var group = builder
+                .MapGroup(prefix)
+                .AddEndpointFilter<ExceptionHandlingEndpointFilter>()
+                .AddEndpointFilter<FileUploadValidationFilter>();
 
             if (imageOnly)
             {
@@ -86,7 +89,10 @@ public static class EndpointRouteBuilderExtensions
         /// <param name="endpointBuilder">The route handler builder.</param>
         /// <param name="imageOnly">Whether to enforce image-only uploads. Default: true.</param>
         /// <returns>The route handler builder for chaining.</returns>
-        public RouteHandlerBuilder WithFileUpload(RouteHandlerBuilder endpointBuilder, bool imageOnly = true)
+        public RouteHandlerBuilder WithFileUpload(
+            RouteHandlerBuilder endpointBuilder,
+            bool imageOnly = true
+        )
         {
             endpointBuilder.AddEndpointFilter<FileUploadValidationFilter>();
 
@@ -134,7 +140,10 @@ public static class EndpointRouteBuilderExtensions
         /// <param name="endpointBuilder">The route handler builder.</param>
         /// <param name="policy">Optional authorization policy name.</param>
         /// <returns>The route handler builder for chaining.</returns>
-        public RouteHandlerBuilder WithAuthorization(RouteHandlerBuilder endpointBuilder, string? policy = null)
+        public RouteHandlerBuilder WithAuthorization(
+            RouteHandlerBuilder endpointBuilder,
+            string? policy = null
+        )
         {
             if (string.IsNullOrEmpty(policy))
             {

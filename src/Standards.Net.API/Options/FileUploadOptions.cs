@@ -21,7 +21,8 @@ public sealed class FileUploadOptions
     /// Gets or sets the allowed image file extensions.
     /// Default: .jpg, .jpeg, .png, .webp
     /// </summary>
-    public HashSet<string> AllowedImageExtensions { get; set; } = new(StringComparer.OrdinalIgnoreCase) { ".jpg", ".jpeg", ".png", ".webp" };
+    public HashSet<string> AllowedImageExtensions { get; set; } =
+        new(StringComparer.OrdinalIgnoreCase) { ".jpg", ".jpeg", ".png", ".webp" };
 
     /// <summary>
     /// Gets or sets the allowed document file extensions.
