@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(("Biblioteca de padronização para APIs ASP.NET Core com suporte a multi-tenancy, au" +
     "tenticação JWT, validação, tratamento de exceções e recursos enterprise."))]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0-alpha+1a37bd62bb271947f38f1d72737e769c75a42ec5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0-alpha+63e8c552905727029704ddca64ad793e3a5434db")]
 [assembly: System.Reflection.AssemblyProductAttribute("Standards.Net.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Standards.Net.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

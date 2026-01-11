@@ -37,9 +37,13 @@ public sealed class ValidationEndpointFilter<TRequest> : IEndpointFilter
 
         if (!validationResult.IsValid)
         {
-            var errors = validationResult.Errors.GroupBy(e => e.PropertyName).ToDictionary(g => g.Key, g => g.Select(e => e.ErrorMessage).ToArray());
+            var errors = validationResult.Errors
+                .GroupBy(e => e.PropertyName)
+                .ToDictionary(g => g.Key, g => g.Select(e => e.ErrorMessage).ToArray());
 
-            var response = ApiResponse<object>.ValidationError("Validation failed", errors);
+            // Return just error messages without field names for backward compatibility
+            var errorMessages = errors.SelectMany(kv => kv.Value).ToList();
+            var response = ApiResponse<object>.Error("Validation failed", errorMessages);
 
             return Results.BadRequest(response);
         }
