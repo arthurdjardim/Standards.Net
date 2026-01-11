@@ -1,0 +1,13 @@
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/bin/Debug/net10.0/Default.API.Standards.deps.json
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/bin/Debug/net10.0/Default.API.Standards.dll
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/bin/Debug/net10.0/Default.API.Standards.pdb
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/Default.API.Standards.csproj.AssemblyReference.cache
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/Default.API.Standards.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/Default.API.Standards.AssemblyInfoInputs.cache
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/Default.API.Standards.AssemblyInfo.cs
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/Default.API.Standards.csproj.CoreCompileInputs.cache
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/Default.API.Standards.sourcelink.json
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/Default.API.Standards.dll
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/refint/Default.API.Standards.dll
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/Default.API.Standards.pdb
+/Users/arthurcjardim/barbershop/back/src/Default.API.Standards/obj/Debug/net10.0/ref/Default.API.Standards.dll
